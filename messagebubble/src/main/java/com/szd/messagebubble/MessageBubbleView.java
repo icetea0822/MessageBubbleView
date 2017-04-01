@@ -79,6 +79,9 @@ public class MessageBubbleView extends View {
         textSize = ta.getDimension(R.styleable.MessageBubble_textSize, 30);
         centerRadius = ta.getDimension(R.styleable.MessageBubble_radius, 30);
         mNumber = ta.getString(R.styleable.MessageBubble_number);
+        if (mNumber == null) {//防止xml中未给mNumber赋值造成预览时报错
+            mNumber = "";
+        }
         ta.recycle();
     }
 
