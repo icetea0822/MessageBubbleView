@@ -18,5 +18,5 @@
 `setOnActionListener()`: 操作的监听，其中包括</br>
 * `onDrag()`：被拖拽时，且未超出最大可拖拽距离。
 * `onMove()`：被拖拽时，已超出最大可拖拽距离。
-* `onDisappear`: 被拖拽的圆消失后。
-* `onRestore`： 被拖拽后又回到原点。
+* `onDisappear()`: 被拖拽的圆消失后。
+* `onRestore()`： 被拖拽后又回到原点。
