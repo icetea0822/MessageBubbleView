@@ -5,16 +5,15 @@
 使用时需要在父布局属性中加入android:clipChildren="false"，否则无法全屏拖动使用。
 
 可选用的属性有：
-|   熟悉   |   作用   |
-|:----|:----|
-|app:radius|圆的半径|
-|app:circleColor|圆的颜色|
-|app:textSize|未读消息的大小|
-|app:number|未读消息的数量|
-|app:textSize|未读消息的大小|
+
+`app:radius`:圆的半径
+`app:circleColor`:圆的颜色
+`app:textSize`:未读消息的大小
+`app:number`:未读消息的数量
+`app:textSize`:未读消息的大小
 
 代码中提供可调用的方法：
-`setDisappearPic(`: 接受一组int类型的数组。可将需要自定义的消失动画放入数组中传入。
+`setDisappearPic()`: 接受一组int类型的数组。可将需要自定义的消失动画放入数组中传入。
 `setNumber()`: 设置需要显示的未读消息数量。
 `setOnActionListener()`: 操作的监听，其中包括
 * `onDrag()`：被拖拽时，且未超出最大可拖拽距离。
