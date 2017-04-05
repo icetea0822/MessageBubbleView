@@ -12,7 +12,7 @@
 `app:number`:未读消息的数量</br>
 `app:textSize`:未读消息的大小</br>
 
-代码中提供可调用的方法：
+代码中提供可调用的方法：</br>
 `setDisappearPic()`: 接受一组int类型的数组。可将需要自定义的消失动画放入数组中传入。</br>
 `setNumber()`: 设置需要显示的未读消息数量。</br>
 `setOnActionListener()`: 操作的监听，其中包括</br>
