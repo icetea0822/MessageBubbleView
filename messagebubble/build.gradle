@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/icetea0822/MessageBubbleView'
     gitUrl = 'https://github.com/icetea0822/MessageBubbleView.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'icetea0822'
     developerName = 'St.Zidong'

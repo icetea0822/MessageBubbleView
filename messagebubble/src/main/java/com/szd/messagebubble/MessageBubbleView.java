@@ -402,7 +402,7 @@ public class MessageBubbleView extends View {
     /**
      * PointF动画估值器(复原时的振动动画)
      */
-    public class MyPointFEvaluator implements TypeEvaluator<PointF> {
+    private class MyPointFEvaluator implements TypeEvaluator<PointF> {
 
         @Override
         public PointF evaluate(float fraction, PointF startPointF, PointF endPointF) {
