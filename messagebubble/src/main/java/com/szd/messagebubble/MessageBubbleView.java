@@ -317,6 +317,10 @@ public class MessageBubbleView extends View {
         valueAnimator.start();
     }
 
+    /**
+     * 绘制贝塞尔曲线
+     * @param canvas canvas
+     */
     private void drawBezier(Canvas canvas) {
         float controlX = (centerCircleX + dragCircleX) / 2;//贝塞尔曲线控制点X坐标
         float controlY = (dragCircleY + centerCircleY) / 2;//贝塞尔曲线控制点Y坐标
