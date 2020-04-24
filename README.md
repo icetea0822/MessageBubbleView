@@ -1,7 +1,7 @@
 # MessageBubbleView
 ### 仿QQ未读消息气泡，可拖动删除。
 ## 使用方法
-依赖 `compile 'com.szd:messagebubble:1.0.2'`即可。
+依赖 `implementation 'com.szd:messagebubble:1.0.2'`即可。
 使用时需要在父布局属性中加入android:clipChildren="false"，否则无法全屏拖动使用。
 
 可选用的属性有：
