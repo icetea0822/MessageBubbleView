@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/icetea0822/MessageBubbleView'
     gitUrl = 'https://github.com/icetea0822/MessageBubbleView.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.4'
 
     developerId = 'icetea0822'
     developerName = 'St.Zidong'
@@ -38,7 +38,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 2
-        versionName "1.0.2"
+        versionName "1.0.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -56,7 +56,7 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
 }
 

@@ -6,6 +6,7 @@ import android.animation.TimeInterpolator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -71,21 +72,21 @@ public class MessageBubbleView extends View {
         super(context);
     }
 
-    public MessageBubbleView(Context context,  AttributeSet attrs) {
+    public MessageBubbleView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MessageBubble);
         circleColor = ta.getColor(R.styleable.MessageBubble_circleColor, Color.RED);
         textColor = ta.getColor(R.styleable.MessageBubble_textColor, Color.WHITE);
-        textSize = ta.getDimension(R.styleable.MessageBubble_textSize, 30);
-        centerRadius = ta.getDimension(R.styleable.MessageBubble_radius, 30);
-        mNumber = ta.getString(R.styleable.MessageBubble_number);
+        textSize = ta.getDimension(R.styleable.MessageBubble_textSize, sp2px(16));
+        centerRadius = ta.getDimension(R.styleable.MessageBubble_radius, dp2px(16));
+        mNumber = ta.getString(R.styleable.MessageBubble_textNumber);
         if (mNumber == null) {//防止xml中未给mNumber赋值造成预览时报错
             mNumber = "";
         }
         ta.recycle();
     }
 
-    public MessageBubbleView(Context context,  AttributeSet attrs, int defStyleAttr) {
+    public MessageBubbleView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -153,12 +154,12 @@ public class MessageBubbleView extends View {
         if (widthMode == MeasureSpec.EXACTLY) {
             mWidth = widthSize;
         } else {
-            mWidth = getPaddingLeft() + 400 + getPaddingRight();
+            mWidth = getPaddingLeft() + dp2px(30) + getPaddingRight();
         }
         if (heightMode == MeasureSpec.EXACTLY) {
             mHeight = heightSize;
         } else {
-            mHeight = getPaddingTop() + 400 + getPaddingBottom();
+            mHeight = getPaddingTop() + dp2px(30) + getPaddingBottom();
         }
         setMeasuredDimension(mWidth, mHeight);
     }
@@ -223,6 +224,9 @@ public class MessageBubbleView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
+        if (mNumber.isEmpty()) {
+            return;
+        }
         if (curState == STATE_NORMAL) {
             //画初始圆
             canvas.drawCircle(centerCircleX, centerCircleY, centerRadius, mPaint);
@@ -319,6 +323,7 @@ public class MessageBubbleView extends View {
 
     /**
      * 绘制贝塞尔曲线
+     *
      * @param canvas canvas
      */
     private void drawBezier(Canvas canvas) {
@@ -369,7 +374,7 @@ public class MessageBubbleView extends View {
     /**
      * 设置消失动画
      *
-     * @param  disappearPic 动画图片
+     * @param disappearPic 动画图片
      */
     public void setDisappearPic(int[] disappearPic) {
         if (disappearPic != null) {
@@ -414,6 +419,16 @@ public class MessageBubbleView extends View {
             float y = startPointF.y + fraction * (endPointF.y - startPointF.y);
             return new PointF(x, y);
         }
+    }
+
+    public static int dp2px(final float dpValue) {
+        final float scale = Resources.getSystem().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    public static int sp2px(final float spValue) {
+        final float fontScale = Resources.getSystem().getDisplayMetrics().scaledDensity;
+        return (int) (spValue * fontScale + 0.5f);
     }
 
 }

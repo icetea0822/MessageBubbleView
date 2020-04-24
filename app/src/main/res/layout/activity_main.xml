@@ -13,15 +13,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         app:circleColor="@android:color/holo_red_dark"
-        app:radius="20dp"
+        app:radius="16dp"
         app:textColor="@android:color/white"
-        app:textSize="20sp" />
+        app:textNumber="30"
+        app:textSize="16sp" />
 
     <LinearLayout
-        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bezierView">
+        android:layout_below="@id/bezierView"
+        android:layout_marginTop="50dp">
+
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
