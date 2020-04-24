@@ -15,11 +15,11 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.Rect;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
+
 
 /**
  * Created by szd on 2017/3/28.
@@ -71,7 +71,7 @@ public class MessageBubbleView extends View {
         super(context);
     }
 
-    public MessageBubbleView(Context context, @Nullable AttributeSet attrs) {
+    public MessageBubbleView(Context context,  AttributeSet attrs) {
         super(context, attrs);
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.MessageBubble);
         circleColor = ta.getColor(R.styleable.MessageBubble_circleColor, Color.RED);
@@ -85,7 +85,7 @@ public class MessageBubbleView extends View {
         ta.recycle();
     }
 
-    public MessageBubbleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public MessageBubbleView(Context context,  AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -369,7 +369,7 @@ public class MessageBubbleView extends View {
     /**
      * 设置消失动画
      *
-     * @param disappearPic
+     * @param  disappearPic 动画图片
      */
     public void setDisappearPic(int[] disappearPic) {
         if (disappearPic != null) {
