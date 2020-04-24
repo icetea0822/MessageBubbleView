@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MessageBubbleView.iml" filepath="$PROJECT_DIR$/MessageBubbleView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/messagebubble/messagebubble.iml" filepath="$PROJECT_DIR$/messagebubble/messagebubble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MessageBubbleView.iml" filepath="$PROJECT_DIR$/MessageBubbleView.iml" group="MessageBubbleView" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="MessageBubbleView/app" />
+      <module fileurl="file://$PROJECT_DIR$/messagebubble/messagebubble.iml" filepath="$PROJECT_DIR$/messagebubble/messagebubble.iml" group="MessageBubbleView/messagebubble" />
     </modules>
   </component>
 </project>
